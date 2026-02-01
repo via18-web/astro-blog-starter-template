@@ -1,50 +1,497 @@
 ---
-import BaseHead from '../components/BaseHead.astro';
+import Layout from '../layouts/Layout.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
-import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 ---
 
-<!doctype html>
-<html lang="en">
-	<head>
-		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
-	</head>
-	<body>
-		<Header />
-		<main>
-			<h1>🧑‍🚀 Hello, Astronaut!</h1>
-			<p>
-				Welcome to the official ok <a href="https://astro.build/">Astro</a> blog starter template. This
-				template serves as a lightweight, minimally-styled starting point for anyone looking to build
-				a personal website, blog, or portfolio with Astro.
-			</p>
-			<p>
-				This template comes with a few integrations already configured in your
-				<code>astro.config.mjs</code> file. You can customize your setup with
-				<a href="https://astro.build/integrations">Astro Integrations</a> to add tools like Tailwind,
-				React, or Vue to your project.
-			</p>
-			<p>Here are a few ideas on how to get started with the template:</p>
-			<ul>
-				<li>Edit this page in <code>src/pages/index.astro</code></li>
-				<li>Edit the site header items in <code>src/components/Header.astro</code></li>
-				<li>Add your name to the footer in <code>src/components/Footer.astro</code></li>
-				<li>Check out the included blog posts in <code>src/content/blog/</code></li>
-				<li>Customize the blog post page layout in <code>src/layouts/BlogPost.astro</code></li>
-			</ul>
-			<p>
-				Have fun! If you get stuck, remember to <a href="https://docs.astro.build/"
-					>read the docs
-				</a> or <a href="https://astro.build/chat">join us on Discord</a> to ask questions.
-			</p>
-			<p>
-				Looking for a blog template with a bit more personality? Check out <a
-					href="https://github.com/Charca/astro-blog-template"
-					>astro-blog-template
-				</a> by <a href="https://twitter.com/Charca">Maxi Ferreira</a>.
-			</p>
-		</main>
-		<Footer />
-	</body>
-</html>
+<Layout 
+  title="Home" 
+  description="XADG is the premium adult ad network connecting high-quality publishers with targeted advertisers. Monetize your traffic or buy premium adult traffic with crypto payment options."
+  keywords="adult ad network, adult advertising, crypto payments, bitcoin ads, adult traffic monetization, adult publishers, adult advertisers"
+>
+  <Header />
+  
+  <main>
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="container hero-content">
+        <h1 class="hero-title">Premium Adult Ad Network</h1>
+        <p class="hero-subtitle">
+          Maximize Revenue. Drive Quality Traffic. Accept Crypto Payments.
+        </p>
+        <p class="hero-description">
+          Join thousands of premium publishers and advertisers in the most advanced adult advertising network. 
+          Get paid in Bitcoin, Ethereum, and other cryptocurrencies.
+        </p>
+        <div class="hero-cta">
+          <a href="/publishers" class="btn">Join as Publisher</a>
+          <a href="/advertisers" class="btn btn-secondary">Start Advertising</a>
+        </div>
+        <div class="hero-stats">
+          <div class="stat">
+            <div class="stat-number">10B+</div>
+            <div class="stat-label">Monthly Impressions</div>
+          </div>
+          <div class="stat">
+            <div class="stat-number">5K+</div>
+            <div class="stat-label">Active Publishers</div>
+          </div>
+          <div class="stat">
+            <div class="stat-number">98%</div>
+            <div class="stat-label">Client Satisfaction</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features">
+      <div class="container">
+        <h2 class="section-title">Why Choose XADG?</h2>
+        <div class="features-grid">
+          <div class="feature-card">
+            <div class="feature-icon">💰</div>
+            <h3>Crypto Payments</h3>
+            <p>Get paid instantly in Bitcoin, Ethereum, USDT, and other cryptocurrencies. Low fees, no delays.</p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon">🎯</div>
+            <h3>Advanced Targeting</h3>
+            <p>Reach your ideal audience with geo-targeting, device targeting, and behavioral optimization.</p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon">📊</div>
+            <h3>Real-Time Analytics</h3>
+            <p>Track your campaigns with detailed real-time statistics and actionable insights.</p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon">🔒</div>
+            <h3>100% Privacy</h3>
+            <p>Your data is secure. We respect privacy and comply with all regulations.</p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon">⚡</div>
+            <h3>High Fill Rates</h3>
+            <p>Premium demand ensures maximum fill rates and eCPM for publishers.</p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon">🚀</div>
+            <h3>Fast Approval</h3>
+            <p>Get approved within 24 hours and start monetizing immediately.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Publishers Section -->
+    <section class="cta-section publishers-section">
+      <div class="container cta-content">
+        <div class="cta-text">
+          <h2>For Publishers</h2>
+          <p>Monetize your adult traffic with the highest eCPMs in the industry. Multiple ad formats, instant payouts, and 24/7 support.</p>
+          <ul class="benefits-list">
+            <li>✓ Highest revenue share</li>
+            <li>✓ Multiple ad formats (banners, popunders, native)</li>
+            <li>✓ Daily payouts in crypto</li>
+            <li>✓ Dedicated account manager</li>
+          </ul>
+          <a href="/publishers" class="btn">Learn More</a>
+        </div>
+        <div class="cta-visual">
+          <div class="visual-card">
+            <div class="metric">
+              <span class="metric-value">$2.50</span>
+              <span class="metric-label">Average eCPM</span>
+            </div>
+            <div class="metric">
+              <span class="metric-value">95%</span>
+              <span class="metric-label">Fill Rate</span>
+            </div>
+            <div class="metric">
+              <span class="metric-value">24h</span>
+              <span class="metric-label">Payment Cycle</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Advertisers Section -->
+    <section class="cta-section advertisers-section">
+      <div class="container cta-content reverse">
+        <div class="cta-visual">
+          <div class="visual-card">
+            <div class="metric">
+              <span class="metric-value">10B+</span>
+              <span class="metric-label">Monthly Reach</span>
+            </div>
+            <div class="metric">
+              <span class="metric-value">190+</span>
+              <span class="metric-label">Countries</span>
+            </div>
+            <div class="metric">
+              <span class="metric-value">0.5%</span>
+              <span class="metric-label">Average CTR</span>
+            </div>
+          </div>
+        </div>
+        <div class="cta-text">
+          <h2>For Advertisers</h2>
+          <p>Drive quality conversions with premium adult traffic. Advanced targeting, competitive pricing, and detailed analytics.</p>
+          <ul class="benefits-list">
+            <li>✓ Premium quality traffic</li>
+            <li>✓ Advanced targeting options</li>
+            <li>✓ Real-time bidding system</li>
+            <li>✓ Anti-fraud protection</li>
+          </ul>
+          <a href="/advertisers" class="btn">Start Campaign</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Ad Formats Section -->
+    <section class="formats">
+      <div class="container">
+        <h2 class="section-title">Ad Formats</h2>
+        <div class="formats-grid">
+          <div class="format-card">
+            <h3>Banner Ads</h3>
+            <p>Standard IAB sizes including 300x250, 728x90, 160x600 and more. High visibility, great performance.</p>
+          </div>
+          <div class="format-card">
+            <h3>Popunder Ads</h3>
+            <p>High-impact full-page ads that maximize conversions. Perfect for offers and landing pages.</p>
+          </div>
+          <div class="format-card">
+            <h3>Native Ads</h3>
+            <p>Seamlessly blend with your content for better user experience and higher engagement.</p>
+          </div>
+          <div class="format-card">
+            <h3>Video Ads</h3>
+            <p>Pre-roll, mid-roll, and outstream video advertising for maximum engagement.</p>
+          </div>
+          <div class="format-card">
+            <h3>Push Notifications</h3>
+            <p>Direct engagement with users through browser push notifications.</p>
+          </div>
+          <div class="format-card">
+            <h3>In-Page Push</h3>
+            <p>Native-looking push ads that work on all devices and platforms.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="final-cta">
+      <div class="container">
+        <h2>Ready to Get Started?</h2>
+        <p>Join the premium adult ad network today and start maximizing your revenue or driving quality traffic.</p>
+        <div class="cta-buttons">
+          <a href="/signup" class="btn">Sign Up Now</a>
+          <a href="/contact" class="btn btn-secondary">Contact Sales</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <Footer />
+</Layout>
+
+<style>
+  .hero {
+    background: linear-gradient(135deg, #1a0033 0%, #330033 50%, #1a0033 100%);
+    color: white;
+    padding: 6rem 0;
+    text-align: center;
+  }
+
+  .hero-content {
+    max-width: 900px;
+    margin: 0 auto;
+  }
+
+  .hero-title {
+    font-size: 3.5rem;
+    font-weight: 900;
+    margin-bottom: 1.5rem;
+    background: var(--gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .hero-subtitle {
+    font-size: 1.75rem;
+    margin-bottom: 1rem;
+    font-weight: 600;
+  }
+
+  .hero-description {
+    font-size: 1.1rem;
+    color: #ccc;
+    margin-bottom: 2.5rem;
+    line-height: 1.8;
+  }
+
+  .hero-cta {
+    display: flex;
+    gap: 1.5rem;
+    justify-content: center;
+    margin-bottom: 4rem;
+  }
+
+  .hero-stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3rem;
+    max-width: 700px;
+    margin: 0 auto;
+  }
+
+  .stat {
+    text-align: center;
+  }
+
+  .stat-number {
+    font-size: 2.5rem;
+    font-weight: 900;
+    color: var(--primary);
+    display: block;
+    margin-bottom: 0.5rem;
+  }
+
+  .stat-label {
+    color: #999;
+    font-size: 0.95rem;
+  }
+
+  .features {
+    padding: 6rem 0;
+    background: var(--gray-light);
+  }
+
+  .section-title {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 4rem;
+  }
+
+  .features-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2.5rem;
+  }
+
+  .feature-card {
+    background: white;
+    padding: 2.5rem;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .feature-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 40px rgba(0,0,0,0.12);
+  }
+
+  .feature-icon {
+    font-size: 3rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .feature-card h3 {
+    color: var(--dark);
+    margin-bottom: 1rem;
+  }
+
+  .feature-card p {
+    color: #666;
+    line-height: 1.6;
+  }
+
+  .cta-section {
+    padding: 6rem 0;
+  }
+
+  .publishers-section {
+    background: white;
+  }
+
+  .advertisers-section {
+    background: var(--gray-light);
+  }
+
+  .cta-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+  }
+
+  .cta-content.reverse {
+    direction: rtl;
+  }
+
+  .cta-content.reverse > * {
+    direction: ltr;
+  }
+
+  .cta-text h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .cta-text p {
+    font-size: 1.1rem;
+    color: #666;
+    margin-bottom: 2rem;
+    line-height: 1.8;
+  }
+
+  .benefits-list {
+    list-style: none;
+    margin-bottom: 2rem;
+  }
+
+  .benefits-list li {
+    font-size: 1.05rem;
+    color: #333;
+    margin-bottom: 0.75rem;
+    padding-left: 0.5rem;
+  }
+
+  .visual-card {
+    background: var(--gradient);
+    padding: 3rem;
+    border-radius: 20px;
+    box-shadow: 0 20px 60px rgba(255, 0, 102, 0.3);
+  }
+
+  .metric {
+    background: rgba(255, 255, 255, 0.15);
+    padding: 1.5rem;
+    border-radius: 10px;
+    margin-bottom: 1.5rem;
+    text-align: center;
+    backdrop-filter: blur(10px);
+  }
+
+  .metric:last-child {
+    margin-bottom: 0;
+  }
+
+  .metric-value {
+    display: block;
+    font-size: 2.5rem;
+    font-weight: 900;
+    color: white;
+    margin-bottom: 0.5rem;
+  }
+
+  .metric-label {
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 0.95rem;
+  }
+
+  .formats {
+    padding: 6rem 0;
+    background: white;
+  }
+
+  .formats-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+  }
+
+  .format-card {
+    background: var(--gray-light);
+    padding: 2rem;
+    border-radius: 10px;
+    border-left: 4px solid var(--primary);
+  }
+
+  .format-card h3 {
+    color: var(--dark);
+    margin-bottom: 1rem;
+  }
+
+  .format-card p {
+    color: #666;
+  }
+
+  .final-cta {
+    background: var(--dark);
+    color: white;
+    padding: 6rem 0;
+    text-align: center;
+  }
+
+  .final-cta h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .final-cta p {
+    font-size: 1.2rem;
+    color: #ccc;
+    margin-bottom: 2.5rem;
+  }
+
+  .cta-buttons {
+    display: flex;
+    gap: 1.5rem;
+    justify-content: center;
+  }
+
+  @media (max-width: 1024px) {
+    .features-grid,
+    .formats-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media (max-width: 768px) {
+    .hero-title {
+      font-size: 2.5rem;
+    }
+
+    .hero-cta {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .hero-cta .btn {
+      width: 100%;
+      max-width: 300px;
+    }
+
+    .hero-stats {
+      grid-template-columns: 1fr;
+      gap: 2rem;
+    }
+
+    .features-grid,
+    .formats-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .cta-content {
+      grid-template-columns: 1fr;
+      gap: 3rem;
+    }
+
+    .cta-buttons {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .cta-buttons .btn {
+      width: 100%;
+      max-width: 300px;
+    }
+  }
+</style>
