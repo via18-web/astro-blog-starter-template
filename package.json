@@ -1,12 +1,13 @@
 {
-	"name": "astro-blog-starter-template",
-	"description": "Build a personal website, blog, or portfolio with Astro.",
+	"name": "xadg-adult-ad-network",
+	"description": "XADG - Premium Adult Ad Network for Publishers and Advertisers with Crypto Payments",
+	"version": "1.0.0",
 	"cloudflare": {
-		"label": "Astro Framework Starter",
+		"label": "XADG Adult Ad Network",
 		"products": [
 			"Workers"
 		],
-		"categories": [],
+		"categories": ["Advertising", "Network"],
 		"preview_icon_url": "https://imagedelivery.net/wSMYJvS3Xw-n339CbDyDIA/394ca3c9-d351-4036-035a-9f6dfa26dd00/public",
 		"preview_image_url": "https://imagedelivery.net/wSMYJvS3Xw-n339CbDyDIA/f40a6577-eed5-4f3e-cef4-b5ef0a1be100/preview",
 		"publish": true
@@ -27,10 +28,12 @@
 		"astro": "astro",
 		"build": "astro build",
 		"cf-typegen": "wrangler types",
-		"check": "astro build && tsc && wrangler deploy --dry-run",
-		"deploy": "wrangler deploy",
+		"check": "astro check && tsc",
+		"deploy": "npm run build && wrangler pages deploy dist",
+		"deploy:production": "npm run build && wrangler pages deploy dist --project-name=xadg-com --branch=production",
 		"dev": "astro dev",
-		"preview": "astro build && wrangler dev"
+		"preview": "astro build && wrangler pages dev dist",
+		"test": "astro check"
 	},
 	"type": "module"
 }

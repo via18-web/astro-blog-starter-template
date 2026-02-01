@@ -1,0 +1,23 @@
+# robots.txt for xadg.com
+User-agent: *
+Allow: /
+
+# Sitemaps
+Sitemap: https://xadg.com/sitemap-index.xml
+
+# Crawl-delay for specific bots
+User-agent: Googlebot
+Crawl-delay: 0
+
+User-agent: Bingbot
+Crawl-delay: 0
+
+# Block bad bots
+User-agent: AhrefsBot
+Disallow: /
+
+User-agent: SemrushBot
+Disallow: /
+
+User-agent: DotBot
+Disallow: /

@@ -2,6 +2,53 @@
 import Layout from '../layouts/Layout.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
+import { SITE_URL, SITE_NAME } from '../consts';
+
+// Homepage Structured Data
+const breadcrumbSchema = {
+	"@context": "https://schema.org",
+	"@type": "BreadcrumbList",
+	"itemListElement": [{
+		"@type": "ListItem",
+		"position": 1,
+		"name": "Home",
+		"item": SITE_URL
+	}]
+};
+
+const serviceSchema = {
+	"@context": "https://schema.org",
+	"@type": "Service",
+	"serviceType": "Adult Advertising Network",
+	"provider": {
+		"@type": "Organization",
+		"name": SITE_NAME,
+		"url": SITE_URL
+	},
+	"areaServed": "Worldwide",
+	"hasOfferCatalog": {
+		"@type": "OfferCatalog",
+		"name": "Advertising Services",
+		"itemListElement": [
+			{
+				"@type": "Offer",
+				"itemOffered": {
+					"@type": "Service",
+					"name": "Publisher Monetization",
+					"description": "Monetize adult traffic with high eCPM rates and crypto payments"
+				}
+			},
+			{
+				"@type": "Offer",
+				"itemOffered": {
+					"@type": "Service",
+					"name": "Advertiser Traffic",
+					"description": "Buy premium adult traffic with advanced targeting options"
+				}
+			}
+		]
+	}
+};
 ---
 
 <Layout 
@@ -10,6 +57,10 @@ import Footer from '../components/Footer.astro';
   keywords="adult ad network, adult advertising, crypto payments, bitcoin ads, adult traffic monetization, adult publishers, adult advertisers"
 >
   <Header />
+  
+  <!-- Structured Data -->
+  <script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)} />
+  <script type="application/ld+json" set:html={JSON.stringify(serviceSchema)} />
   
   <main>
     <!-- Hero Section -->
