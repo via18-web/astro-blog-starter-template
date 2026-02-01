@@ -28,13 +28,10 @@
 		"astro": "astro",
 		"build": "astro build",
 		"cf-typegen": "wrangler types",
-		"check": "astro check && tsc",
-		"deploy": "astro build",
-		"deploy:wrangler": "npm run build && wrangler pages deploy dist",
-		"deploy:production": "npm run build && wrangler pages deploy dist --project-name=xadg-com --branch=production",
+		"check": "astro build && tsc && wrangler deploy --dry-run",
+		"deploy": "wrangler deploy",
 		"dev": "astro dev",
-		"preview": "astro build && wrangler pages dev dist",
-		"test": "astro check"
+		"preview": "astro build && wrangler dev"
 	},
 	"type": "module"
 }
